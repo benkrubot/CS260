@@ -1,7 +1,8 @@
 /* Not sure if the marbles are supposed to be indivdual things. If so, then I will change my code to reflect that
 such as creating a list or array called bag that will add the number of marbles to it via user input. So if I had
 an empty bag of marbles and the user wanted to add 5 marbles, maybe it would look something like:
-{0, 0, 0, 0, 0} indicating there are 5 marbles in the bag now. */
+{0, 0, 0, 0, 0} indicating there are 5 marbles in the bag now. Or perhaps each element is an integer e.g. {12,13,14} 
+*/
 
 #include <iostream>
 #include <list>
