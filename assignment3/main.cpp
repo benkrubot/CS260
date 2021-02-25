@@ -1,4 +1,7 @@
-//Followed a few guides, but I think i understand it pretty well unless I implemented it wrong. We create our empty queue, and in the enqueue function the new linked list node is created, and if the queue is empty then the new node that is added is both the front and rear. From there, we add new nodes, and each time we do so we advance the rear pointer to the next node. For the dequeue method, this will remove the front node and advance the pointer to the next node. If the queue is empty it will return null. 
+/*Followed a few guides, but I think i understand it pretty well unless I implemented it wrong. We create our empty queue, and in the enqueue function the new 
+linked list node is created, and if the queue is empty then the new node that is added is both the front and rear. From there, we add new nodes, and each time 
+we do so we advance the rear pointer to the next node. For the dequeue method, this will remove the front node and advance the pointer to the next node. If the 
+queue is empty it will return null. */
 
 #include <iostream>
 
