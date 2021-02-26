@@ -55,7 +55,7 @@ struct queue {
     int n = front->data;              //Storing node data
     cout<<n<<" was removed."<<endl;   //Displaying what is being removed
     node* temp = front;               //Store address of current node trying to delete in a temp pointer to node
-    front = front->next;              //Advancing front pointer to next node
+    front = front->next;              //Advancing front pointer to next
   
     //If the front becomes null, then this will change the rear to null as well
     if (front == NULL) 
@@ -76,6 +76,21 @@ struct queue {
       return(n);
     }
   }
+
+  void testdequeue()
+  {
+    cout<<front->data<<endl;
+  }
+
+  void testenqueue()
+  {
+    cout<<rear->data<<endl;
+  }
+
+  void testpeek()
+  {
+    cout<<front->data<<endl;
+  }
 }; 
 
 //Driver
@@ -83,7 +98,8 @@ int main()
 {
   //Testing the enqueue and dequeue functions as well as pointers
   queue linkedlist; 
-  linkedlist.dequeue();
+  
+  linkedlist.dequeue();     //Returns 0, empty
   linkedlist.enqueue(10); 
   cout << "Front of queue is: " << (linkedlist.front)->data << endl;
 
@@ -91,13 +107,15 @@ int main()
   cout << "Front of queue is: " << (linkedlist.front)->data << endl;
 
   linkedlist.dequeue(); 
+  linkedlist.testdequeue(); //Testing to see if dequeue removed 10, this will cout the new front which is 20
   cout << "Front of queue is: " << (linkedlist.front)->data << endl;
 
   linkedlist.dequeue();
   linkedlist.enqueue(30);
   cout << "Front of queue is: " << (linkedlist.front)->data << endl; 
 
-  linkedlist.enqueue(40); 
+  linkedlist.enqueue(40);
+  linkedlist.testenqueue(); //Testing to see if enqueue added to the rear, this will cout the rear which is 40 
   cout << "Front of queue is: " << (linkedlist.front)->data << endl;
 
   linkedlist.enqueue(50); 
@@ -107,5 +125,7 @@ int main()
   cout << "Front of queue is: " << (linkedlist.front)->data << endl; 
   cout << "Rear of queue is: " << (linkedlist.rear)->data << endl; 
 
+  linkedlist.testpeek(); //Testing to see if peek returns the same value, this will cout the front which is 40
   linkedlist.peek();
+
 }
